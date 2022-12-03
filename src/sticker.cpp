@@ -2,14 +2,8 @@
 #include <string.h>
 
 // constructors and destructors
-Sticker::Sticker()
+Sticker::Sticker() : player_name(NULL), birth_date(NULL), national_team(NULL), joined_year(NULL), player_weight(0), player_height(0)
 {
-  Sticker::player_name = "";
-  Sticker::birth_date = "";
-  Sticker::national_team = "";
-  Sticker::joined_year = 0;
-  Sticker::player_weight = 0.0;
-  Sticker::player_height = 0.0;
 }
 
 Sticker::Sticker(
@@ -18,22 +12,8 @@ Sticker::Sticker(
     char *national_team,
     unsigned int *joined_year,
     float player_weight,
-    float player_height)
+    float player_height) : player_name(player_name), birth_date(birth_date), national_team(national_team), joined_year(joined_year), player_weight(player_weight), player_height(player_height)
 {
-  // allocate memory for attributes
-  Sticker::player_name = new char[strlen(player_name) + 1];
-  Sticker::birth_date = new char[strlen(birth_date) + 1];
-  Sticker::national_team = new char[strlen(national_team) + 1];
-  Sticker::joined_year = new unsigned int;
-
-  // copy values to attributes
-  strcpy(Sticker::player_name, player_name);
-  strcpy(Sticker::birth_date, birth_date);
-  strcpy(Sticker::national_team, national_team);
-
-  *Sticker::joined_year = *joined_year;
-  Sticker::player_weight = player_weight;
-  Sticker::player_height = player_height;
 }
 
 Sticker::~Sticker()

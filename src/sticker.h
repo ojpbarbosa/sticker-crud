@@ -24,13 +24,7 @@ private:
 public:
   // constructors and destructors
   Sticker();
-  Sticker(
-      char *player_name,
-      char *birth_date,
-      char *national_team,
-      unsigned int *joined_year,
-      float player_weight,
-      float player_height);
+  Sticker(char *, char *, char *, unsigned int *, float, float);
   ~Sticker();
 
   // see BinaryReader equivalent
