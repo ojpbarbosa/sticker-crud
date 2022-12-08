@@ -1,7 +1,11 @@
-#include <stdio.h>
+#ifndef STICKER_H
+#define STICKER_H
 
-#ifndef STICKER
-#define STICKER
+#include <stdio.h>
+#include <iostream>
+#include <sstream>
+
+using namespace std;
 
 class Sticker
 {
@@ -9,32 +13,33 @@ private:
   static const size_t REGISTER_SIZE =
       sizeof(char) * 3 + sizeof(unsigned int) + sizeof(float) * 2;
 
-  // char attributes
-  char *player_name;
-  char *birth_date;
-  char *national_team;
+  // string attributes
+  string player_name;
+  string birth_date;
+  string national_team;
 
   // int attributes
-  unsigned int *joined_year;
+  unsigned int joined_year;
 
   // float attributes
   float player_weight;
   float player_height;
 
+  static string to_string(Sticker *sticker);
+
 public:
   // constructors and destructors
   Sticker();
-  Sticker(char *, char *, char *, unsigned int *, float, float);
+  Sticker(string, string, string, unsigned int, float, float);
   ~Sticker();
 
-  // see BinaryReader equivalent
-  Sticker *read_register(FILE *file);
-  // see BinaryWriter equivalent
+  void *read_register(FILE *file, int offset);
   void write_register(FILE *file);
 
-  // overrides
-  int compare(Sticker *sticker);
-  char *to_string();
+  // override
+  int compare(Sticker sticker);
+
+  friend ostream &operator<<(ostream &, const Sticker &);
 };
 
 #endif
