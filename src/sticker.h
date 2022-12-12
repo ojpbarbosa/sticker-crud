@@ -47,9 +47,9 @@ public:
   void set_player_height(float) throw(invalid_argument);
 
   // constructors and destructor
-  Sticker();
+  Sticker() noexcept;
   Sticker(unsigned int, bool, string, string, string, unsigned int, float, float) throw(invalid_argument);
-  ~Sticker();
+  ~Sticker() noexcept;
 
   void read_register(fstream &, int) noexcept;
   void write_register(fstream &) const;

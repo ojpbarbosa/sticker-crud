@@ -13,8 +13,8 @@ private:
   string filename;
 
 public:
-  Stickers(string);
-  ~Stickers();
+  Stickers(string) noexcept;
+  ~Stickers() noexcept;
 
   unsigned int get_next_id() const;
   unsigned int count() const;
