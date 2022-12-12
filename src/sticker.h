@@ -48,7 +48,7 @@ public:
 
   // constructors and destructor
   Sticker();
-  Sticker(unsigned int, bool, string, string, string, unsigned int, float, float) throw();
+  Sticker(unsigned int, bool, string, string, string, unsigned int, float, float) throw(invalid_argument);
   ~Sticker();
 
   void read_register(fstream &, int) noexcept;
