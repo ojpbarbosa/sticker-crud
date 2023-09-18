@@ -1,6 +1,6 @@
 <h2>Description</h2>
 <p>
-This project is a World Cup player stickers CRUD me and <a href="https://github.com/obielwb">Gabriel Willian Bartmanovicz</a> developed for our Topics in Object Oriented Programming (OOP) in the fourth semester the <a href="https://wikipedia.org/wiki/Technical_High_School_of_Campinas">Technical High School of Campinas - Unicamp</a>, while we were studying OOP with C++ and binary representation of data. Therefore, the data related to the CRUD is saved as a <pre>.dat</pre> file instead of saving it to a regular database. The UI is in Brazilian Portuguese.
+This project is a World Cup player stickers CRUD me and <a href="https://github.com/obielwb">Gabriel Willian Bartmanovicz</a> developed for our Topics in Object Oriented Programming (OOP) in the fourth semester the <a href="https://wikipedia.org/wiki/Technical_High_School_of_Campinas">Technical High School of Campinas - Unicamp</a>, while we were studying OOP with C++ and binary representation of data. Therefore, the data related to the CRUD is saved as a <i>.dat</i> file instead of saving it to a regular database. The UI is in Brazilian Portuguese.
 </p>
 <h2>Run</h2>
 
