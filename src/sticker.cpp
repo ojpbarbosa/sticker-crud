@@ -8,8 +8,8 @@ using namespace std;
 
 #define throw(...)
 
-// constructors and destructors
-Sticker::Sticker() : id(0), foil(false), player({"", "", "", 0, 0.0, 0.0})
+// constructors and destructor
+Sticker::Sticker() noexcept : id(0), foil(false), player({"", "", "", 0, 0.0, 0.0})
 {
 }
 
@@ -33,7 +33,7 @@ Sticker::Sticker(
   this->set_player_height(player_height);
 }
 
-Sticker::~Sticker()
+Sticker::~Sticker() noexcept
 {
 }
 

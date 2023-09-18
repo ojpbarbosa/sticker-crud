@@ -1,3 +1,6 @@
 main
 *.dat
-.vscode
+*.exe
+*.o
+
+/.vscode

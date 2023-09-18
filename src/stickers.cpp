@@ -5,11 +5,12 @@
 
 using namespace std;
 
-Stickers::Stickers(string filename) : filename(filename)
+// constructors and destructor
+Stickers::Stickers(string filename) noexcept : filename(filename)
 {
 }
 
-Stickers::~Stickers()
+Stickers::~Stickers() noexcept
 {
 }
 
